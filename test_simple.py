@@ -41,7 +41,9 @@ def parse_args():
                             "mono+stereo_no_pt_640x192",
                             "mono_1024x320",
                             "stereo_1024x320",
-                            "mono+stereo_1024x320"])
+                            "mono+stereo_1024x320",
+                            "mono_model_320x96",
+                            "mono_model_320x96_labeled"])
     parser.add_argument('--ext', type=str,
                         help='image extension to search for in folder', default="jpg")
     parser.add_argument("--no_cuda",
@@ -114,10 +116,9 @@ def test_simple(args):
     print("-> Predicting on {:d} test images".format(len(paths)))
 
     # PREDICTING ON EACH IMAGE IN TURN
-    with torch.no_grad():
-        for idx, image_path in enumerate(paths):
-
-            if image_path.endswith("_disp.jpg"):
+    for idx, image_path in enumerate(paths):
+        with torch.no_grad():
+            if image_path.endswith("_disp.png"):
                 # don't try to predict disparity for a disparity image!
                 continue
 
@@ -155,7 +156,7 @@ def test_simple(args):
             colormapped_im = (mapper.to_rgba(disp_resized_np)[:, :, :3] * 255).astype(np.uint8)
             im = pil.fromarray(colormapped_im)
 
-            name_dest_im = os.path.join(output_directory, "{}_disp.jpeg".format(output_name))
+            name_dest_im = os.path.join(output_directory, "{}_disp.png".format(output_name))
             im.save(name_dest_im)
 
             print("   Processed {:d} of {:d} images - saved predictions to:".format(

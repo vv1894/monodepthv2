@@ -103,24 +103,23 @@ def evaluate(opt):
         print("-> Computing predictions with size {}x{}".format(
             encoder_dict['width'], encoder_dict['height']))
 
-        with torch.no_grad():
-            for data in dataloader:
-                input_color = data[("color", 0, 0)].cuda()
+        for data in dataloader:
+            input_color = data[("color", 0, 0)].cuda()
 
-                if opt.post_process:
-                    # Post-processed results require each image to have two forward passes
-                    input_color = torch.cat((input_color, torch.flip(input_color, [3])), 0)
+            if opt.post_process:
+                # Post-processed results require each image to have two forward passes
+                input_color = torch.cat((input_color, torch.flip(input_color, [3])), 0)
 
-                output = depth_decoder(encoder(input_color))
+            output = depth_decoder(encoder(input_color))
 
-                pred_disp, _ = disp_to_depth(output[("disp", 0)], opt.min_depth, opt.max_depth)
-                pred_disp = pred_disp.cpu()[:, 0].numpy()
+            pred_disp, _ = disp_to_depth(output[("disp", 0)], opt.min_depth, opt.max_depth)
+            pred_disp = pred_disp.cpu()[:, 0].detach().numpy()
 
-                if opt.post_process:
-                    N = pred_disp.shape[0] // 2
-                    pred_disp = batch_post_process_disparity(pred_disp[:N], pred_disp[N:, :, ::-1])
+            if opt.post_process:
+                N = pred_disp.shape[0] // 2
+                pred_disp = batch_post_process_disparity(pred_disp[:N], pred_disp[N:, :, ::-1])
 
-                pred_disps.append(pred_disp)
+            pred_disps.append(pred_disp)
 
         pred_disps = np.concatenate(pred_disps)
 
@@ -163,7 +162,7 @@ def evaluate(opt):
         quit()
 
     gt_path = os.path.join(splits_dir, opt.eval_split, "gt_depths.npz")
-    gt_depths = np.load(gt_path, fix_imports=True, encoding='latin1')["data"]
+    gt_depths = np.load(gt_path, fix_imports=True, allow_pickle=True, encoding='latin1')["data"]
 
     print("-> Evaluating")
 

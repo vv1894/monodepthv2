@@ -1,0 +1,347 @@
+model_0
+
+Training model named:
+   mono_model
+Models and tensorboard events files are saved to:
+   /home/ryan/tmp
+Training is using:
+   cuda
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+Using split:
+   eigen_zhou
+There are 39810 training items and 4424 validation items
+
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Training
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/nn/functional.py:3826: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+epoch   0 | batch      0 | examples/s:   7.5 | loss: 0.16260 | time elapsed: 00h00m11s | time left: 00h00m00s
+epoch   0 | batch    250 | examples/s:  13.7 | loss: 0.14214 | time elapsed: 00h01m45s | time left: 02h17m58s
+epoch   0 | batch    500 | examples/s:  15.9 | loss: 0.15945 | time elapsed: 00h03m17s | time left: 02h07m32s
+epoch   0 | batch    750 | examples/s:  13.9 | loss: 0.12857 | time elapsed: 00h04m53s | time left: 02h04m57s
+epoch   0 | batch   1000 | examples/s:  13.7 | loss: 0.13270 | time elapsed: 00h06m29s | time left: 02h02m43s
+epoch   0 | batch   1250 | examples/s:  13.9 | loss: 0.13225 | time elapsed: 00h08m05s | time left: 02h00m44s
+epoch   0 | batch   1500 | examples/s:  13.9 | loss: 0.18669 | time elapsed: 00h09m39s | time left: 01h58m25s
+epoch   0 | batch   1750 | examples/s:  13.9 | loss: 0.15729 | time elapsed: 00h11m14s | time left: 01h56m33s
+epoch   0 | batch   2000 | examples/s:  13.1 | loss: 0.13654 | time elapsed: 00h12m46s | time left: 01h54m23s
+epoch   0 | batch   4000 | examples/s:  13.7 | loss: 0.17281 | time elapsed: 00h25m30s | time left: 01h41m23s
+epoch   0 | batch   6000 | examples/s:  12.5 | loss: 0.15881 | time elapsed: 00h38m24s | time left: 01h29m01s
+epoch   0 | batch   8000 | examples/s:  11.7 | loss: 0.12860 | time elapsed: 00h51m18s | time left: 01h16m20s
+Training
+epoch   1 | batch     48 | examples/s:  13.9 | loss: 0.16397 | time elapsed: 01h04m27s | time left: 01h03m49s
+epoch   1 | batch   2048 | examples/s:  13.8 | loss: 0.15039 | time elapsed: 01h17m13s | time left: 00h50m51s
+epoch   1 | batch   4048 | examples/s:  13.9 | loss: 0.15035 | time elapsed: 01h29m55s | time left: 00h37m55s
+epoch   1 | batch   6048 | examples/s:  13.9 | loss: 0.15403 | time elapsed: 01h42m37s | time left: 00h25m02s
+epoch   1 | batch   8048 | examples/s:  13.5 | loss: 0.13511 | time elapsed: 01h55m23s | time left: 00h12m12s
+
+-> Loading weights from /home/ryan/tmp/mono_model/models/weights_1/
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+-> Computing predictions with size 640x192
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 124.255 | std: 0.164
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.443  &   4.757  &  12.083  &   0.588  &   0.303  &   0.561  &   0.766  \\
+
+-> Done!
+
+
+
+model_1
+
+
+Training model named:
+   mono_model_1
+Models and tensorboard events files are saved to:
+   /home/ryan/tmp
+Training is using:
+   cuda
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+Using split:
+   eigen_zhou
+There are 39810 training items and 4424 validation items
+
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Training
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/nn/functional.py:3826: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+epoch   0 | batch      0 | examples/s:   7.2 | loss: 0.14317 | time elapsed: 00h00m09s | time left: 00h00m00s
+epoch   0 | batch    250 | examples/s:  13.9 | loss: 0.15460 | time elapsed: 00h01m45s | time left: 06h58m58s
+epoch   0 | batch    500 | examples/s:  13.8 | loss: 0.16637 | time elapsed: 00h03m18s | time left: 06h32m37s
+epoch   0 | batch    750 | examples/s:  13.9 | loss: 0.17061 | time elapsed: 00h04m54s | time left: 06h25m32s
+epoch   0 | batch   1000 | examples/s:  13.9 | loss: 0.16779 | time elapsed: 00h06m29s | time left: 06h21m16s
+epoch   0 | batch   1250 | examples/s:  13.9 | loss: 0.12976 | time elapsed: 00h08m03s | time left: 06h16m52s
+epoch   0 | batch   1500 | examples/s:  13.9 | loss: 0.15949 | time elapsed: 00h09m40s | time left: 06h15m41s
+epoch   0 | batch   1750 | examples/s:  13.9 | loss: 0.15556 | time elapsed: 00h11m17s | time left: 06h14m03s
+epoch   0 | batch   2000 | examples/s:  13.9 | loss: 0.17615 | time elapsed: 00h12m54s | time left: 06h12m37s
+epoch   0 | batch   4000 | examples/s:  13.9 | loss: 0.16837 | time elapsed: 00h25m32s | time left: 05h55m49s
+epoch   0 | batch   6000 | examples/s:  13.9 | loss: 0.15236 | time elapsed: 00h38m13s | time left: 05h42m10s
+epoch   0 | batch   8000 | examples/s:  13.8 | loss: 0.11771 | time elapsed: 00h50m54s | time left: 05h29m05s
+Training
+epoch   1 | batch     48 | examples/s:  13.8 | loss: 0.15806 | time elapsed: 01h03m48s | time left: 05h17m11s
+epoch   1 | batch   2048 | examples/s:  13.8 | loss: 0.16111 | time elapsed: 01h16m34s | time left: 05h04m27s
+epoch   1 | batch   4048 | examples/s:  13.8 | loss: 0.17011 | time elapsed: 01h29m22s | time left: 04h51m48s
+epoch   1 | batch   6048 | examples/s:  13.8 | loss: 0.15402 | time elapsed: 01h42m06s | time left: 04h38m56s
+epoch   1 | batch   8048 | examples/s:  13.8 | loss: 0.18634 | time elapsed: 01h54m51s | time left: 04h26m09s
+Training
+epoch   2 | batch     96 | examples/s:  13.8 | loss: 0.16020 | time elapsed: 02h07m37s | time left: 04h13m25s
+epoch   2 | batch   2096 | examples/s:  13.8 | loss: 0.17013 | time elapsed: 02h20m21s | time left: 04h00m36s
+epoch   2 | batch   4096 | examples/s:  15.8 | loss: 0.17457 | time elapsed: 02h33m10s | time left: 03h47m56s
+epoch   2 | batch   6096 | examples/s:  15.7 | loss: 0.14157 | time elapsed: 02h45m58s | time left: 03h35m11s
+epoch   2 | batch   8096 | examples/s:  13.8 | loss: 0.17062 | time elapsed: 02h58m43s | time left: 03h22m24s
+Training
+epoch   3 | batch    144 | examples/s:  13.8 | loss: 0.17860 | time elapsed: 03h11m35s | time left: 03h09m45s
+epoch   3 | batch   2144 | examples/s:  13.8 | loss: 0.14408 | time elapsed: 03h24m21s | time left: 02h56m58s
+epoch   3 | batch   4144 | examples/s:  13.9 | loss: 0.13433 | time elapsed: 03h37m04s | time left: 02h44m09s
+epoch   3 | batch   6144 | examples/s:  13.9 | loss: 0.13479 | time elapsed: 03h49m53s | time left: 02h31m25s
+epoch   3 | batch   8144 | examples/s:  13.8 | loss: 0.16868 | time elapsed: 04h02m39s | time left: 02h18m38s
+Training
+epoch   4 | batch    192 | examples/s:  13.7 | loss: 0.14500 | time elapsed: 04h15m31s | time left: 02h05m55s
+epoch   4 | batch   2192 | examples/s:  13.9 | loss: 0.19813 | time elapsed: 04h28m18s | time left: 01h53m09s
+epoch   4 | batch   4192 | examples/s:  13.9 | loss: 0.15631 | time elapsed: 04h40m58s | time left: 01h40m19s
+epoch   4 | batch   6192 | examples/s:  13.8 | loss: 0.18548 | time elapsed: 04h53m39s | time left: 01h27m32s
+epoch   4 | batch   8192 | examples/s:  13.9 | loss: 0.12410 | time elapsed: 05h06m24s | time left: 01h14m45s
+Training
+epoch   5 | batch    240 | examples/s:  13.8 | loss: 0.15012 | time elapsed: 05h19m13s | time left: 01h02m00s
+epoch   5 | batch   2240 | examples/s:  13.6 | loss: 0.16488 | time elapsed: 05h32m02s | time left: 00h49m14s
+epoch   5 | batch   4240 | examples/s:  13.9 | loss: 0.13839 | time elapsed: 05h44m49s | time left: 00h36m28s
+epoch   5 | batch   6240 | examples/s:  13.9 | loss: 0.13802 | time elapsed: 05h57m38s | time left: 00h23m42s
+epoch   5 | batch   8240 | examples/s:  13.9 | loss: 0.15126 | time elapsed: 06h10m30s | time left: 00h10m56s
+
+-> Loading weights from /home/ryan/tmp/mono_model_1/models/weights_5/
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+-> Computing predictions with size 640x192
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 124.255 | std: 0.164
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.443  &   4.757  &  12.083  &   0.588  &   0.303  &   0.561  &   0.766  \\
+
+-> Done!
+
+
+finetuned-model
+
+loading model from folder /home/ryan/tmp/mono_model/models/weights_1
+Loading encoder weights...
+Loading depth weights...
+Loading pose_encoder weights...
+Loading pose weights...
+Loading Adam weights
+Training model named:
+   finetuned_mono
+Models and tensorboard events files are saved to:
+   /home/ryan/tmp
+Training is using:
+   cuda
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+Using split:
+   eigen_zhou
+There are 39810 training items and 4424 validation items
+
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Training
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/nn/functional.py:3826: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+epoch   0 | batch      0 | examples/s:   7.5 | loss: 0.14813 | time elapsed: 00h00m09s | time left: 00h00m00s
+epoch   0 | batch    250 | examples/s:  15.0 | loss: 0.14436 | time elapsed: 00h01m45s | time left: 04h39m25s
+epoch   0 | batch    500 | examples/s:  13.9 | loss: 0.16544 | time elapsed: 00h03m22s | time left: 04h25m54s
+epoch   0 | batch    750 | examples/s:  15.8 | loss: 0.14389 | time elapsed: 00h04m55s | time left: 04h16m41s
+epoch   0 | batch   1000 | examples/s:  15.5 | loss: 0.16214 | time elapsed: 00h06m32s | time left: 04h13m53s
+epoch   0 | batch   1250 | examples/s:  13.8 | loss: 0.16071 | time elapsed: 00h08m07s | time left: 04h10m46s
+epoch   0 | batch   1500 | examples/s:  13.8 | loss: 0.15048 | time elapsed: 00h09m44s | time left: 04h08m38s
+epoch   0 | batch   1750 | examples/s:  13.8 | loss: 0.15092 | time elapsed: 00h11m19s | time left: 04h06m14s
+epoch   0 | batch   2000 | examples/s:  13.8 | loss: 0.12347 | time elapsed: 00h12m52s | time left: 04h03m27s
+epoch   0 | batch   4000 | examples/s:  13.8 | loss: 0.15156 | time elapsed: 00h25m28s | time left: 03h48m06s
+epoch   0 | batch   6000 | examples/s:  13.8 | loss: 0.14457 | time elapsed: 00h38m15s | time left: 03h35m33s
+epoch   0 | batch   8000 | examples/s:  13.8 | loss: 0.12385 | time elapsed: 00h50m51s | time left: 03h22m11s
+Training                                            
+epoch   1 | batch     48 | examples/s:  13.8 | loss: 0.14892 | time elapsed: 01h03m37s | time left: 03h09m39s
+epoch   1 | batch   2048 | examples/s:  13.8 | loss: 0.14785 | time elapsed: 01h16m19s | time left: 02h56m52s
+epoch   1 | batch   4048 | examples/s:  13.8 | loss: 0.16872 | time elapsed: 01h29m02s | time left: 02h44m07s
+epoch   1 | batch   6048 | examples/s:  13.8 | loss: 0.14219 | time elapsed: 01h41m46s | time left: 02h31m26s
+epoch   1 | batch   8048 | examples/s:  13.8 | loss: 0.13539 | time elapsed: 01h54m32s | time left: 02h18m46s
+Training
+epoch   2 | batch     96 | examples/s:  13.9 | loss: 0.17113 | time elapsed: 02h07m17s | time left: 02h06m03s
+epoch   2 | batch   2096 | examples/s:  13.9 | loss: 0.16640 | time elapsed: 02h19m55s | time left: 01h53m15s
+epoch   2 | batch   4096 | examples/s:  13.8 | loss: 0.15867 | time elapsed: 02h32m42s | time left: 01h40m35s
+epoch   2 | batch   6096 | examples/s:  13.8 | loss: 0.16594 | time elapsed: 02h45m20s | time left: 01h27m48s
+epoch   2 | batch   8096 | examples/s:  14.7 | loss: 0.17759 | time elapsed: 02h58m03s | time left: 01h15m05s
+Training
+epoch   3 | batch    144 | examples/s:  15.8 | loss: 0.15307 | time elapsed: 03h10m46s | time left: 01h02m22s
+epoch   3 | batch   2144 | examples/s:  13.8 | loss: 0.17158 | time elapsed: 03h23m26s | time left: 00h49m38s
+epoch   3 | batch   4144 | examples/s:  13.8 | loss: 0.17517 | time elapsed: 03h36m10s | time left: 00h36m55s
+epoch   3 | batch   6144 | examples/s:  13.8 | loss: 0.14328 | time elapsed: 03h48m48s | time left: 00h24m12s
+epoch   3 | batch   8144 | examples/s:  13.9 | loss: 0.14616 | time elapsed: 04h01m30s | time left: 00h11m29s
+
+-> Loading weights from /home/ryan/tmp/finetuned_mono/models/weights_3
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+-> Computing predictions with size 640x192
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 124.255 | std: 0.164
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.443  &   4.757  &  12.083  &   0.588  &   0.303  &   0.561  &   0.766  \\
+
+-> Done!
+
+model_grad_1
+
+## training
+Training model named:
+   mono_model_320x92
+Models and tensorboard events files are saved to:
+   ./log
+Training is using:
+   cuda
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+Using split:
+   eigen_zhou
+There are 39810 training items and 4424 validation items
+
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Training
+/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torch/nn/functional.py:3826: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+epoch   0 | batch      0 | examples/s:  13.4 | loss: 0.15910 | time elapsed: 00h00m09s | time left: 00h00m00s
+epoch   0 | batch    250 | examples/s:  28.2 | loss: 0.09090 | time elapsed: 00h02m39s | time left: 08h47m50s
+epoch   0 | batch    500 | examples/s:  25.9 | loss: 0.12742 | time elapsed: 00h05m11s | time left: 08h31m12s
+epoch   0 | batch    750 | examples/s:  29.8 | loss: 0.11473 | time elapsed: 00h07m41s | time left: 08h22m51s
+epoch   0 | batch   1000 | examples/s:  30.0 | loss: 0.13249 | time elapsed: 00h10m14s | time left: 08h19m09s
+epoch   0 | batch   1250 | examples/s:  30.0 | loss: 0.09693 | time elapsed: 00h12m42s | time left: 08h13m04s
+epoch   0 | batch   1500 | examples/s:  29.1 | loss: 0.12655 | time elapsed: 00h15m10s | time left: 08h08m17s
+epoch   0 | batch   1750 | examples/s:  31.3 | loss: 0.09716 | time elapsed: 00h17m36s | time left: 08h02m57s
+epoch   0 | batch   2000 | examples/s:  30.0 | loss: 0.08725 | time elapsed: 00h20m07s | time left: 08h00m38s
+epoch   0 | batch   4000 | examples/s:  31.4 | loss: 0.09743 | time elapsed: 00h39m58s | time left: 07h37m21s
+Training
+epoch   1 | batch   1024 | examples/s:  31.5 | loss: 0.08511 | time elapsed: 00h59m57s | time left: 07h17m16s
+epoch   1 | batch   3024 | examples/s:  31.4 | loss: 0.07931 | time elapsed: 01h19m54s | time left: 06h57m07s
+Training
+epoch   2 | batch     48 | examples/s:  30.1 | loss: 0.08004 | time elapsed: 01h40m03s | time left: 06h37m48s
+epoch   2 | batch   2048 | examples/s:  30.0 | loss: 0.09440 | time elapsed: 02h00m03s | time left: 06h17m45s
+epoch   2 | batch   4048 | examples/s:  30.0 | loss: 0.07575 | time elapsed: 02h20m04s | time left: 05h57m47s
+Training
+epoch   3 | batch   1072 | examples/s:  30.0 | loss: 0.07407 | time elapsed: 02h40m00s | time left: 05h37m38s
+epoch   3 | batch   3072 | examples/s:  31.5 | loss: 0.07636 | time elapsed: 03h00m03s | time left: 05h17m41s
+Training
+epoch   4 | batch     96 | examples/s:  31.5 | loss: 0.07415 | time elapsed: 03h20m07s | time left: 04h57m47s
+epoch   4 | batch   2096 | examples/s:  30.0 | loss: 0.06704 | time elapsed: 03h40m11s | time left: 04h37m50s
+epoch   4 | batch   4096 | examples/s:  30.1 | loss: 0.07996 | time elapsed: 04h00m06s | time left: 04h17m43s
+Training
+epoch   5 | batch   1120 | examples/s:  30.0 | loss: 0.09074 | time elapsed: 04h20m06s | time left: 03h57m41s
+epoch   5 | batch   3120 | examples/s:  30.1 | loss: 0.06269 | time elapsed: 04h40m06s | time left: 03h37m40s
+Training
+epoch   6 | batch    144 | examples/s:  29.3 | loss: 0.06305 | time elapsed: 05h00m10s | time left: 03h17m42s
+epoch   6 | batch   2144 | examples/s:  30.0 | loss: 0.07487 | time elapsed: 05h20m11s | time left: 02h57m42s
+epoch   6 | batch   4144 | examples/s:  29.6 | loss: 0.07759 | time elapsed: 05h40m02s | time left: 02h37m37s
+Training
+epoch   7 | batch   1168 | examples/s:  30.1 | loss: 0.06536 | time elapsed: 05h59m59s | time left: 02h17m35s
+epoch   7 | batch   3168 | examples/s:  30.0 | loss: 0.08156 | time elapsed: 06h19m56s | time left: 01h57m34s
+Training
+epoch   8 | batch    192 | examples/s:  31.3 | loss: 0.06580 | time elapsed: 06h39m51s | time left: 01h37m33s
+epoch   8 | batch   2192 | examples/s:  29.8 | loss: 0.05885 | time elapsed: 06h59m41s | time left: 01h17m32s
+epoch   8 | batch   4192 | examples/s:  30.1 | loss: 0.05622 | time elapsed: 07h19m38s | time left: 00h57m33s
+Training
+epoch   9 | batch   1216 | examples/s:  29.4 | loss: 0.07253 | time elapsed: 07h39m38s | time left: 00h37m34s
+epoch   9 | batch   3216 | examples/s:  30.0 | loss: 0.06918 | time elapsed: 07h59m46s | time left: 00h17m35s
+
+## evaluation
+-> Loading weights from /home/ryan/文档/coding/monodepth2/log/mono_model_320x92/models/weights_9
+-> Computing predictions with size 320x96
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 32.318 | std: 0.123
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.152  &   1.235  &   5.568  &   0.227  &   0.809  &   0.939  &   0.975  \\
+
+-> Done!/home/ryan/anaconda3/envs/md2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+
+  model_new_train
+
+Training model named:
+   mono_model_320x92_labeled
+Models and tensorboard events files are saved to:
+   ./log
+Training is using:
+   cuda
+/media/ryan/ldata/anaconda/envs/mdv2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+Using split:
+   eigen_zhou
+There are 39810 training items and 4424 validation items
+
+/media/ryan/ldata/anaconda/envs/mdv2/lib/python3.6/site-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Training
+/media/ryan/ldata/anaconda/envs/mdv2/lib/python3.6/site-packages/torch/nn/functional.py:3826: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+epoch   0 | batch      0 | examples/s:   8.1 | loss: 0.02825 | time elapsed: 00h00m09s | time left: 00h00m00s
+epoch   0 | batch    250 | examples/s:  30.2 | loss: 0.02404 | time elapsed: 00h02m34s | time left: 08h29m06s
+epoch   0 | batch    500 | examples/s:  30.1 | loss: 0.02222 | time elapsed: 00h05m00s | time left: 08h13m20s
+epoch   0 | batch    750 | examples/s:  30.2 | loss: 0.02022 | time elapsed: 00h07m28s | time left: 08h08m28s
+epoch   0 | batch   1000 | examples/s:  30.3 | loss: 0.01537 | time elapsed: 00h09m54s | time left: 08h02m45s
+epoch   0 | batch   1250 | examples/s:  30.2 | loss: 0.01810 | time elapsed: 00h12m16s | time left: 07h56m35s
+epoch   0 | batch   1500 | examples/s:  30.2 | loss: 0.02190 | time elapsed: 00h14m43s | time left: 07h53m43s
+epoch   0 | batch   1750 | examples/s:  30.1 | loss: 0.02330 | time elapsed: 00h17m07s | time left: 07h49m53s
+epoch   0 | batch   2000 | examples/s:  30.2 | loss: 0.02075 | time elapsed: 00h19m31s | time left: 07h46m24s
+epoch   0 | batch   4000 | examples/s:  30.1 | loss: 0.01758 | time elapsed: 00h38m54s | time left: 07h25m07s
+Training
+epoch   1 | batch   1024 | examples/s:  29.4 | loss: 0.02301 | time elapsed: 00h58m27s | time left: 07h06m24s
+epoch   1 | batch   3024 | examples/s:  28.7 | loss: 0.02120 | time elapsed: 01h17m59s | time left: 06h47m09s
+Training
+epoch   2 | batch     48 | examples/s:  29.3 | loss: 0.01483 | time elapsed: 01h37m33s | time left: 06h27m51s
+epoch   2 | batch   2048 | examples/s:  29.9 | loss: 0.01560 | time elapsed: 01h56m57s | time left: 06h08m01s
+epoch   2 | batch   4048 | examples/s:  30.1 | loss: 0.01292 | time elapsed: 02h16m23s | time left: 05h48m23s
+Training
+epoch   3 | batch   1072 | examples/s:  29.5 | loss: 0.01467 | time elapsed: 02h35m58s | time left: 05h29m07s
+epoch   3 | batch   3072 | examples/s:  31.6 | loss: 0.01247 | time elapsed: 02h55m27s | time left: 05h09m34s
+Training
+epoch   4 | batch     96 | examples/s:  28.5 | loss: 0.01216 | time elapsed: 03h15m02s | time left: 04h50m14s
+epoch   4 | batch   2096 | examples/s:  31.6 | loss: 0.01487 | time elapsed: 03h34m28s | time left: 04h30m37s
+epoch   4 | batch   4096 | examples/s:  30.1 | loss: 0.01538 | time elapsed: 03h54m06s | time left: 04h11m16s
+Training
+epoch   5 | batch   1120 | examples/s:  29.8 | loss: 0.01638 | time elapsed: 04h13m46s | time left: 03h51m54s
+epoch   5 | batch   3120 | examples/s:  29.9 | loss: 0.01860 | time elapsed: 04h33m31s | time left: 03h32m34s
+Training
+epoch   6 | batch    144 | examples/s:  29.0 | loss: 0.01560 | time elapsed: 04h53m15s | time left: 03h13m09s
+epoch   6 | batch   2144 | examples/s:  31.4 | loss: 0.01445 | time elapsed: 05h12m42s | time left: 02h53m32s
+epoch   6 | batch   4144 | examples/s:  31.3 | loss: 0.01695 | time elapsed: 05h32m16s | time left: 02h34m01s
+Training
+epoch   7 | batch   1168 | examples/s:  31.5 | loss: 0.01304 | time elapsed: 05h51m49s | time left: 02h14m28s
+epoch   7 | batch   3168 | examples/s:  29.9 | loss: 0.01540 | time elapsed: 06h11m15s | time left: 01h54m53s
+Training
+epoch   8 | batch    192 | examples/s:  31.6 | loss: 0.01572 | time elapsed: 06h30m39s | time left: 01h35m19s
+epoch   8 | batch   2192 | examples/s:  27.0 | loss: 0.01548 | time elapsed: 06h50m26s | time left: 01h15m50s
+epoch   8 | batch   4192 | examples/s:  31.3 | loss: 0.01481 | time elapsed: 07h10m07s | time left: 00h56m18s
+Training
+epoch   9 | batch   1216 | examples/s:  31.4 | loss: 0.01640 | time elapsed: 07h29m54s | time left: 00h36m46s
+epoch   9 | batch   3216 | examples/s:  30.0 | loss: 0.01685 | time elapsed: 07h49m43s | time left: 00h17m13s
+
+  -> Loading weights from models/mono_model_320x96_labeled/models/weights_9
+/media/ryan/ldata/anaconda/envs/mdv2/lib/python3.6/site-packages/torchvision/transforms/transforms.py:258: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+-> Computing predictions with size 320x96
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 46.820 | std: 0.173
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.449  &   5.009  &  11.962  &   0.582  &   0.316  &   0.576  &   0.760  \\
+
+-> Done!

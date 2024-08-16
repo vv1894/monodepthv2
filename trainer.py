@@ -25,6 +25,7 @@ import datasets
 import networks
 from IPython import embed
 
+torch.backends.cudnn.enabled = False
 
 class Trainer:
     def __init__(self, options):
@@ -327,14 +328,13 @@ class Trainer:
             self.val_iter = iter(self.val_loader)
             inputs = self.val_iter.next()
 
-        with torch.no_grad():
-            outputs, losses = self.process_batch(inputs)
+        outputs, losses = self.process_batch(inputs)
 
-            if "depth_gt" in inputs:
-                self.compute_depth_losses(inputs, outputs, losses)
+        if "depth_gt" in inputs:
+            self.compute_depth_losses(inputs, outputs, losses)
 
-            self.log("val", inputs, outputs, losses)
-            del inputs, outputs, losses
+        self.log("val", inputs, outputs, losses)
+        del inputs, outputs, losses
 
         self.set_train()
 
@@ -422,7 +422,7 @@ class Trainer:
             disp = outputs[("disp", scale)]
             color = inputs[("color", 0, scale)]
             target = inputs[("color", 0, source_scale)]
-
+            
             for frame_id in self.opt.frame_ids[1:]:
                 pred = outputs[("color", frame_id, scale)]
                 reprojection_losses.append(self.compute_reprojection_loss(pred, target))
