@@ -10,6 +10,7 @@ import os
 import skimage.transform
 import numpy as np
 import PIL.Image as pil
+import cv2
 
 from kitti_utils import generate_depth_map
 from .mono_dataset import MonoDataset
@@ -76,6 +77,31 @@ class KITTIRAWDataset(KITTIDataset):
             "velodyne_points/data/{:010d}.bin".format(int(frame_index)))
 
         depth_gt = generate_depth_map(calib_path, velo_filename, self.side_map[side])
+        depth_gt = skimage.transform.resize(
+            depth_gt, self.full_res_shape[::-1], order=0, preserve_range=True, mode='constant')
+        
+        opt_path = "/media/ryan/ldata/project/eigen_zhou/kitti_data"
+        if self.save_copy:
+            os.makedirs(os.path.join(opt_path, folder, "velodyne_points2depth"), exist_ok=True)
+            path_origin = os.path.join(opt_path, folder, "velodyne_points2depth")
+            depth_image_8bit = (depth_gt / depth_gt.max() * 255).astype(np.uint8)
+            save_path = os.path.join(path_origin, "{:010d}.png".format(int(frame_index)))
+            cv2.imwrite(save_path, depth_image_8bit)
+
+        f_str = "{:010d}{}".format(frame_index, '.png')
+        depth_path = os.path.join(
+            opt_path, folder, "image_0{}/data".format(self.side_map[side]), f_str)
+        with pil.open(depth_path) as img:
+            img_gray = img.convert('L')
+            depth_gt = np.array(img_gray)
+            depth_gt = depth_gt / 255.0
+            if self.save_copy:
+                os.makedirs(os.path.join(opt_path, folder, "dep_anything2depth"), exist_ok=True)
+                path_origin = os.path.join(opt_path, folder, "dep_anything2depth")
+                depth_image_8bit = (depth_gt / depth_gt.max() * 255).astype(np.uint8)
+                save_path = os.path.join(path_origin, "{:010d}.png".format(int(frame_index)))
+                cv2.imwrite(save_path, depth_image_8bit)
+
         depth_gt = skimage.transform.resize(
             depth_gt, self.full_res_shape[::-1], order=0, preserve_range=True, mode='constant')
 

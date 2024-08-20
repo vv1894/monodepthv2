@@ -43,6 +43,7 @@ def parse_args():
                             "stereo_1024x320",
                             "mono+stereo_1024x320",
                             "mono_model_320x96",
+                            "mono_model_320x96_tryyy",
                             "mono_model_320x96_labeled"])
     parser.add_argument('--ext', type=str,
                         help='image extension to search for in folder', default="jpg")

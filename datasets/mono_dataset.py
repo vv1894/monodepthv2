@@ -37,6 +37,7 @@ class MonoDataset(data.Dataset):
         num_scales
         is_train
         img_ext
+        save_copy
     """
     def __init__(self,
                  data_path,
@@ -46,7 +47,8 @@ class MonoDataset(data.Dataset):
                  frame_idxs,
                  num_scales,
                  is_train=False,
-                 img_ext='.jpg'):
+                 img_ext='.jpg',
+                 save_copy=False):
         super(MonoDataset, self).__init__()
 
         self.data_path = data_path
@@ -60,6 +62,7 @@ class MonoDataset(data.Dataset):
 
         self.is_train = is_train
         self.img_ext = img_ext
+        self.save_copy = save_copy
 
         self.loader = pil_loader
         self.to_tensor = transforms.ToTensor()

@@ -12,11 +12,13 @@ try3
 python train.py --model_name mono_model_2 --data_path /media/ryan/ldata/monodepth2/kitti_data --batch_size 6 --num_epochs 10
 
 try4
-python train.py --model_name mono_model_320x92 --data_path /media/ryan/ldata/monodepth2/kitti_data --batch_size 8 --log_dir ./log --num_workers 6 --num_epochs 10 --width 320 --height 96
+python train.py --model_name mono_model_320x96 --data_path /media/ryan/ldata/project/kitti_data --batch_size 16 --log_dir ./log --num_workers 6 --num_epochs 1 --width 320 --height 96
 
 new_data
-python train.py --model_name mono_model_320x96  _labeled --data_path /media/ryan/ldata/eigen_zhou/kitti_data --batch_size 8 --log_dir ./log --num_workers 6 --num_epochs 10 --width 320 --height 96 --png
+python train.py --model_name mono_model_320x96_tryyy --data_path /media/ryan/ldata/project/kitti_data --batch_size 8 --log_dir ./log --num_workers 6 --num_epochs 2 --width 320 --height 96 --save_copy
 
+finishrun
+python train.py --model_name mono_model_320x96_final --data_path /media/ryan/ldata/project/kitti_data --batch_size 8 --log_dir ./log --num_workers 6 --width 320 --height 96
 
 prepare ground truth m
 python export_gt_depth.py --data_path /media/ryan/ldata/monodepth2/kitti_data --split eigen
